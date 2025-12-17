@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alghi | Creative Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="fixed-nav">
+      <div class="logo">Alghi.</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="mobile-menu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-overlay">
+          <h1 class="hero-title">Welcome to<br />My Universe</h1>
+          <p class="hero-subtitle">Scroll to Explore</p>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="content-section">
+        <canvas id="canvas-about" class="bg-canvas"></canvas>
+        <div class="container">
+          <div class="section-grid">
+            <div class="about-image-wrapper parallax-element">
+              <!-- Placeholder for user profile image -->
+              <div class="profile-placeholder">
+                <img
+                  src="/foto/1000090958.jpg"
+                  alt="Alghi Profile"
+                  class="profile-img"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('no-img');"
+                />
+                <div class="img-decoration"></div>
+              </div>
+            </div>
+            <div class="about-content">
+              <span class="eyebrow">Hallo Saya</span>
+              <h2 class="live-text">Muhammad Abudzar Alghifar</h2>
+              <h3 class="role-title live-text">
+                Digital Creator & UI/UX Designer
+              </h3>
+              <p class="live-text">
+                Saya adalah seorang Digital Creator dan UI/UX Designer yang
+                percaya bahwa desain bukan hanya tentang tampilan, tetapi
+                tentang bagaimana manusia berpikir, merasakan, dan berinteraksi
+                dengan teknologi. Setiap karya yang saya buat berangkat dari
+                empati, riset, dan tujuan yang jelas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="content-section light-bg">
+        <canvas id="canvas-skills" class="bg-canvas"></canvas>
+        <div class="container">
+          <div class="center-header">
+            <span class="eyebrow">My Arsenal</span>
+            <h2 class="live-text">Skills & Tools</h2>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+            <div class="skill-card">
+              <h3>Design</h3>
+              <ul>
+                <li>UI/UX Design</li>
+                <li>Motion Graphics</li>
+                <li>Prototyping</li>
+              </ul>
+            </div>
+            <div class="skill-card">
+              <h3>Tools</h3>
+              <ul>
+                <li>Figma</li>
+                <li>Blender</li>
+                <li>Spline</li>
+                <li>VS Code</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="content-section">
+        <canvas id="canvas-projects" class="bg-canvas"></canvas>
+        <div class="container">
+          <div class="header-row">
+            <h2 class="live-text">Projects</h2>
+            <p>Prototype Pengajuan Masyarakat</p>
+          </div>
+          <div class="projects-list">
+            <!-- Project Item 1 -->
+            <article class="project-item">
+              <div class="project-info">
+                <h3 class="live-text">Website Pemesanan Restoran</h3>
+                <p>
+                  Website pemesanan untuk restoran dengan fitur pemesanan online
+                  dan pengiriman pesanan.
+                </p>
+                <div class="tags">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+              </div>
+              <div class="project-visual parallax-element">
+                <!-- Ganti 'nama-file-gambar.jpg' dengan nama file gambar Anda di folder foto -->
+                <img
+                  src="/foto/image.png"
+                  alt="Proyek Restoran"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                />
+              </div>
+            </article>
+            <!-- Project Item 2 -->
+            <article class="project-item reverse">
+              <div class="project-info">
+                <h3 class="live-text">Portfolio 2024</h3>
+                <p>Interactive portfolio website featuring 3D elements.</p>
+                <div class="tags"><span>Spline</span><span>GSAP</span></div>
+              </div>
+              <div class="project-visual parallax-element">
+                <div class="visual-placeholder gradient-2"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="content-section dark-bg">
+        <!-- Kept original marquee, maybe add canvas overlay if needed later, 
+             for now removing the old CSS bg to prevent conflict -->
+        <div class="container fluid-container">
+          <div class="center-header">
+            <h2>Gallery</h2>
+            <p>Snapshots of my creative journey.</p>
+          </div>
+
+          <div class="gallery-marquee">
+            <!-- Row 1: Moves Left -->
+            <div class="marquee-row scroll-left">
+              <div class="marquee-content">
+                <div class="box-image">
+                  <img src="/foto/20240420124607780.jpg" alt="Gallery 1" />
+                </div>
+                <div class="box-image">
+                  <img
+                    src="/foto/PXL_20231018_110740846.PORTRAIT.jpg"
+                    alt="Gallery 2"
+                  />
+                </div>
+                <div class="box-image">
+                  <img
+                    src="/foto/PXL_20231018_110747031.PORTRAIT.jpg"
+                    alt="Gallery 3"
+                  />
+                </div>
+                <div class="box-image">
+                  <img src="/foto/20230823_074117_'.jpg" alt="Gallery 4" />
+                </div>
+                <div class="box-image">
+                  <img src="/foto/20230823_073930_'.jpg" alt="Gallery 5" />
+                </div>
+                <!-- Duplicate for loop -->
+                <div class="box-image">
+                  <img src="/foto/1000077685.jpg" alt="Gallery 1" />
+                </div>
+                <div class="box-image">
+                  <img
+                    src="/foto/20230427_074906_lmc_8.4.MP.jpg"
+                    alt="Gallery 2"
+                  />
+                </div>
+                <div class="box-image">
+                  <img src="/foto/IMG-20200116-WA0067.jpg" alt="Gallery 3" />
+                </div>
+                <div class="box-image">
+                  <img src="/foto/1678618628133.jpg" alt="Gallery 4" />
+                </div>
+                <div class="box-image">
+                  <img src="/foto/IMG_20230312_095649.jpg" alt="Gallery 5" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Moves Right -->
+            <div class="marquee-row scroll-right">
+              <div class="marquee-content">
+                <div class="box-image">
+                  <img
+                    src="https://source.unsplash.com/random/400x400?minimal"
+                    alt="Gallery 6"
+                  />
+                </div>
+                <div class="box-image">
+                  <img
+                    src="https://source.unsplash.com/random/400x400?abstract"
+                    alt="Gallery 7"
+                  />
+                </div>
+                <div class="box-image">
+                  <img
+                    src="https://source.unsplash.com/random/400x400?modern"
+                    alt="Gallery 8"
+                  />
+                </div>
+                <div class="box-image">
+                  <img
+                    src="https://source.unsplash.com/random/400x400?ui"
+                    alt="Gallery 9"
+                  />
+                </div>
+                <div class="box-image">
+                  <img
+                    src="https://source.unsplash.com/random/400x400?website"
+                    alt="Gallery 10"
+                  />
+                </div>
+                <!-- Duplicate for loop -->
+                <div class="box-image">
+                  <img
+                    src="https://source.unsplash.com/random/400x400?minimal"
+                    alt="Gallery 6"
+                  />
+                </div>
+                <div class="box-image">
+                  <img
+                    src="https://source.unsplash.com/random/400x400?abstract"
+                    alt="Gallery 7"
+                  />
+                </div>
+                <div class="box-image">
+                  <img
+                    src="https://source.unsplash.com/random/400x400?modern"
+                    alt="Gallery 8"
+                  />
+                </div>
+                <div class="box-image">
+                  <img
+                    src="https://source.unsplash.com/random/400x400?ui"
+                    alt="Gallery 9"
+                  />
+                </div>
+                <div class="box-image">
+                  <img
+                    src="https://source.unsplash.com/random/400x400?website"
+                    alt="Gallery 10"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="content-section">
+        <canvas id="canvas-contact" class="bg-canvas"></canvas>
+        <div class="container">
+          <div class="contact-wrapper">
+            <h2 class="live-text">Let's Create Together</h2>
+            <p>Have a project in mind? I'd love to hear from you.</p>
+            <a href="mailto:hello@alghi.com" class="cta-button">
+              <span>Get in Touch</span>
+            </a>
+
+            <footer class="site-footer">
+              <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+              </div>
+              <p class="copyright">© 2025 Alghi. All Rights Reserved.</p>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
