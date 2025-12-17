@@ -73,6 +73,9 @@ class AbstractCanvas {
     observer.observe(this.canvas.parentElement); // Observe section
 
     window.addEventListener("resize", () => this.resize());
+
+    // Trigger initial resize to set correct DPI size
+    this.resize();
   }
 
   resize() {
