@@ -76,8 +76,21 @@ class AbstractCanvas {
   }
 
   resize() {
-    this.width = this.canvas.width = window.innerWidth;
-    this.height = this.canvas.height = window.innerHeight;
+    const dpr = window.devicePixelRatio || 1;
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
+
+    // Scale the internal resolution
+    this.canvas.width = this.width * dpr;
+    this.canvas.height = this.height * dpr;
+
+    // Scale visual size
+    this.canvas.style.width = `${this.width}px`;
+    this.canvas.style.height = `${this.height}px`;
+
+    // Scale drawing context so we can continue using logical pixels
+    this.ctx.scale(dpr, dpr);
+
     this.onResize && this.onResize();
   }
 
